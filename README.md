@@ -5,7 +5,7 @@
 * [Examples](#examples)
 * [Demo](#demo)
 * [License](#license)
-* [Pull Requests](#pull)
+* [Changelog](#changelog)
 
 # About
 
@@ -46,3 +46,8 @@ or
 # License
 
 MIT
+
+# Changelog
+
+*0.0.1* - create module.
+*0.0.2* - fix imports in ImagedNavBar component.
