@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { SafeAreaView, Image, View, } from 'react-native'
 import NavBar from '../NavBar'
-import Placeholder from './Placeholder'
+import Placeholder from '../Placeholder'
 import styles from './styles'
 import { between, } from '../../helpers'
 
