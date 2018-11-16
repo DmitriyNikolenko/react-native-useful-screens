@@ -16,17 +16,26 @@ or
 `yarn add git+https://git@github.com/DmitriyNikolenko/react-native-useful-screens.git`
 
 # Usage
+
+## Import
 ```javascript
-	import Page from 'react-native-useful-screens'
+	import Screen from 'react-native-useful-screens'
 ```
+
+## Screen props
+| props      | description    | default                 | type                                                                                                                |   |
+|------------|----------------|-------------------------|---------------------------------------------------------------------------------------------------------------------|---|
+| headerType | Type of header | Screen.headerTypes.NONE | oneOf([Screen.headerTypes.NONE, Screen.headerTypes.SINGLE, Screen.headerTypes.FLOATING, Screen.headerTypes.IMAGED]) |   |
+| title      | Header title   | undefined               | string                                                                                                              |   |
+| color      | Header color   | undefined               | string  
 
 # Examples
 
 ```javascript
-	<Page
-		headerType={Page.headerTypes.IMAGED}
+	<Screen
+		headerType={Screen.headerTypes.IMAGED}
 		// NavBar props
-		title="Page title"
+		title="Screen title"
 		color="orange"
 		leftComponent={DrawerMenuButton}
 		rightComponent={AppNavMenu}
@@ -37,11 +46,14 @@ or
 		footerComponent={Footer}
 	>
 		<Text>Hello world!</Text>
-	</Page>
+	</Screen>
 ```
 
 # Demo
-...
+
+| Screen.headerTypes.FLOATING | Screen.headerTypes.IMAGED |
+| ------------- |:-------------:|
+| ![floating navbar](/demo/floating.gif "headerType={Screen.headerTypes.FLOATING}") |  ![imaged navbar](/demo/imaged.gif "headerType={Screen.headerTypes.IMAGED}") |
 
 # License
 
@@ -49,5 +61,5 @@ MIT
 
 # Changelog
 
-*0.0.1* - create module.
-*0.0.2* - fix imports in ImagedNavBar component.
+*0.0.1* - created module.
+*0.0.2* - fixed imports in ImagedNavBar component, adding demo gifs, update docs
