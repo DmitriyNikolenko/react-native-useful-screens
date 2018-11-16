@@ -59,7 +59,7 @@ export default class Page extends React.Component {
 					onMomentumScrollEnd={isDynamic ? this.handleScroll : undefined}
 					onScroll={isDynamic ? this.handleScroll : undefined}
 				>
-					<Placeholder height={expandedHeight ? expandedHeight - height : 0} />
+					<Placeholder height={expandedHeight ? expandedHeight - height : (isDynamic ? height : 0)} />
 					{children}
 				</ScrollView>
 				{ FooterComponent ? <FooterComponent /> : null}

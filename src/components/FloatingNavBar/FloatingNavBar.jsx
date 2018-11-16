@@ -23,7 +23,8 @@ export default class FloatingNavBar extends React.Component {
 	static getDerivedStateFromProps(nextProps, prevState) {
 		if (nextProps.offsetY !== prevState.offsetY) {
 			const { offsetY, floatingRatio, height, } = nextProps
-			const translateY = Math.floor(between(prevState.translateY + (prevState.offsetY - offsetY) / floatingRatio, -height, 0))
+			const floating = nextProps.offsetY > prevState.offsetY ? floatingRatio : 1
+			const translateY = Math.floor(between(prevState.translateY + (prevState.offsetY - offsetY) / floating, -height, 0))
 
 			return translateY === prevState.translateY
 				? { offsetY, }

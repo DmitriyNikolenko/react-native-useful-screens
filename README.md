@@ -11,15 +11,19 @@
 
 # Installation
 
-`npm install git+https://git@github.com/DmitriyNikolenko/react-native-useful-screens.git` 
+```
+npm install react-native-useful-screens
+```
 or 
-`yarn add git+https://git@github.com/DmitriyNikolenko/react-native-useful-screens.git`
+```
+yarn add react-native-useful-screens
+```
 
 # Usage
 
 ## Import
 ```javascript
-	import Screen from 'react-native-useful-screens'
+import Screen from 'react-native-useful-screens'
 ```
 
 ## Screen props
@@ -32,21 +36,21 @@ or
 # Examples
 
 ```javascript
-	<Screen
-		headerType={Screen.headerTypes.IMAGED}
-		// NavBar props
-		title="Screen title"
-		color="orange"
-		leftComponent={DrawerMenuButton}
-		rightComponent={AppNavMenu}
-		// ImagedNavBar props
-		imageSrc={require('./images/header-bg')}
-		expandedHeight={240}
-		// Content props
-		footerComponent={Footer}
-	>
-		<Text>Hello world!</Text>
-	</Screen>
+<Screen
+	headerType={Screen.headerTypes.IMAGED}
+	// NavBar props
+	title="Screen title"
+	color="orange"
+	leftComponent={DrawerMenuButton}
+	rightComponent={AppNavMenu}
+	// ImagedNavBar props
+	imageSrc={require('./images/header-bg')}
+	expandedHeight={240}
+	// Content props
+	footerComponent={Footer}
+>
+	<Text>Hello world!</Text>
+</Screen>
 ```
 
 # Demo
@@ -61,5 +65,6 @@ MIT
 
 # Changelog
 
-*0.0.1* - created module.
-*0.0.2* - fixed imports in ImagedNavBar component, adding demo gifs, update docs
+- *0.0.3* - fixed collapsing bug in FloatingNavBar
+- *0.0.2* - fixed imports in ImagedNavBar component, adding demo gifs, update docs
+- *0.0.1* - created module.
