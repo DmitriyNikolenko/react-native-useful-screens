@@ -1,0 +1,34 @@
+{
+  "name": "react-native-useful-screens",
+  "version": "0.0.1",
+  "description": "Set of screen boilerplates for React Native",
+  "private": false,
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "react",
+    "ui",
+	"screen",
+	"navigation"
+  ],
+  "author": {
+    "name": "Dmitriy Nikolenko",
+    "email": "dmitriynikolenko@gmail.com"
+  },
+  "homepage": "https://github.com/DmitriyNikolenko/react-native-useful-screens",
+  "bugs": {
+    "url": "https://github.com/DmitriyNikolenko/react-native-useful-screens/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DmitriyNikolenko/react-native-useful-screens.git"
+  },
+  "license": "MIT",
+  "scripts": {},
+  "peerDependencies": {
+	"react": ">=16.0.0",
+	"react-native": ">=0.50",
+	"prop-types": ">=15.6.1"
+  }
+}
