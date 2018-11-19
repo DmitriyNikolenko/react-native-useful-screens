@@ -2,12 +2,11 @@
 * [About](#about)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Examples](#examples)
-* [Demo](#demo)
 * [License](#license)
 * [Changelog](#changelog)
 
 # About
+A set of screens with headers for React Native.
 
 # Installation
 
@@ -27,33 +26,48 @@ import Screen from 'react-native-useful-screens'
 ```
 
 ## Screen props
-| props      | description    | default                 | type                                                                                                                |   |
-|------------|----------------|-------------------------|---------------------------------------------------------------------------------------------------------------------|---|
-| headerType | Type of header | Screen.headerTypes.NONE | oneOf([Screen.headerTypes.NONE, Screen.headerTypes.SINGLE, Screen.headerTypes.FLOATING, Screen.headerTypes.IMAGED]) |   |
-| title      | Header title   | undefined               | string                                                                                                              |   |
-| color      | Header color   | undefined               | string  
+| props           | description             | default                 | type |   headerType   |
+|-----------------|-------------------------|-------------------------|------|----------------|
+| headerType      | Type of header          | Screen.headerTypes.NONE | oneOf([Screen.headerTypes.NONE, Screen.headerTypes.SINGLE, Screen.headerTypes.FLOATING, Screen.headerTypes.IMAGED]) | all |
+| title           | Header title            | undefined               | string  | all |
+| height          | height of header        | ios: 44, android: 56    | number | all |
+| color           | Header color            | undefined               | string   | all |
+| children        | Screen content          | undefined               | React.Node | all |
+| topComponent    | Component above content | undefined               | React.Node | all |
+| footerComponent | Component below content | undefined               | React.Node | all |
+| floatingRatio   | speed of expand header    | 3  | number | 'floating' |
+| expandedHeight  | height of expanded header | ios: 44, android: 56  | number | 'imaged' |
+| imageSrc        | image source for header   | undefined  | required image | 'imaged' |
 
-# Examples
+
+## Header types
+- *'none'* - Screen.headerTypes.NONE
+- *'single'* - Screen.headerTypes.SINGLE
+- *'floating'* - Screen.headerTypes.FLOATING
+- *'imaged'* - Screen.headerTypes.IMAGED
+
+## Example
 
 ```javascript
 <Screen
+	// Screen props
 	headerType={Screen.headerTypes.IMAGED}
-	// NavBar props
+	topComponent={TabBar}
+	footerComponent={Footer}
+	// Single header props
 	title="Screen title"
 	color="orange"
 	leftComponent={DrawerMenuButton}
 	rightComponent={AppNavMenu}
-	// ImagedNavBar props
+	// Imaged header props
 	imageSrc={require('./images/header-bg')}
 	expandedHeight={240}
-	// Content props
-	footerComponent={Footer}
 >
-	<Text>Hello world!</Text>
+	<Text>Content</Text>
 </Screen>
 ```
 
-# Demo
+## Demo
 
 | Screen.headerTypes.FLOATING | Screen.headerTypes.IMAGED |
 | ------------- |:-------------:|
@@ -65,6 +79,7 @@ MIT
 
 # Changelog
 
+- *0.0.4* - update docs
 - *0.0.3* - fixed collapsing bug in FloatingNavBar
 - *0.0.2* - fixed imports in ImagedNavBar component, adding demo gifs, update docs
 - *0.0.1* - created module.
