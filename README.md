@@ -79,6 +79,7 @@ MIT
 
 # Changelog
 
+- *0.0.5* - rename .jsx files to .js
 - *0.0.4* - update docs
 - *0.0.3* - fixed collapsing bug in FloatingNavBar
 - *0.0.2* - fixed imports in ImagedNavBar component, adding demo gifs, update docs

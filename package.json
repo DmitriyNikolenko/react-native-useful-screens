@@ -1,6 +1,6 @@
 {
   "name": "react-native-useful-screens",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Set of screen boilerplates for React Native",
   "private": false,
   "main": "index.js",
